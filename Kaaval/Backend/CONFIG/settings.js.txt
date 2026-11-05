@@ -1,0 +1,10 @@
+module.exports = {
+    schoolName: "KAAVAL School",
+
+    attendance: {
+        startTime: "09:00",
+        lateCutoff: "09:15"
+    },
+
+    timezone: "Asia/Kolkata"
+};

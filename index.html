@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KAAVAL | Admin Dashboard</title>
+
+    <meta
+        name="description"
+        content="KAAVAL School Attendance Admin Dashboard"
+    >
+
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+
+            <div class="brand">
+                <div class="brand-logo">K</div>
+
+                <div>
+                    <h2>KAAVAL</h2>
+                    <p>Attendance System</p>
+                </div>
+            </div>
+
+            <div class="sidebar-heading">MAIN MENU</div>
+
+            <nav class="navigation">
+
+                <a href="#overview" class="nav-link active">
+                    <span class="nav-icon">⌂</span>
+                    <span>Overview</span>
+                </a>
+
+                <a href="#students" class="nav-link">
+                    <span class="nav-icon">♙</span>
+                    <span>Students</span>
+                </a>
+
+                <a href="#teachers" class="nav-link">
+                    <span class="nav-icon">♟</span>
+                    <span>Teachers</span>
+                </a>
+
+                <a href="#classes" class="nav-link">
+                    <span class="nav-icon">▦</span>
+                    <span>Classes & Sections</span>
+                </a>
+
+                <a href="#attendance" class="nav-link">
+                    <span class="nav-icon">✓</span>
+                    <span>Attendance</span>
+                </a>
+
+                <a href="#reports" class="nav-link">
+                    <span class="nav-icon">▤</span>
+                    <span>Reports</span>
+                </a>
+
+                <a href="#devices" class="nav-link">
+                    <span class="nav-icon">▣</span>
+                    <span>Devices</span>
+                </a>
+
+                <a href="#settings" class="nav-link">
+                    <span class="nav-icon">⚙</span>
+                    <span>Settings</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>KAAVAL Project</p>
+                <small>Admin UI Preview</small>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOPBAR -->
+            <header class="topbar">
+
+                <div class="topbar-left">
+
+                    <button
+                        class="menu-button"
+                        id="menuButton"
+                        aria-label="Toggle navigation"
+                        aria-expanded="false"
+                    >
+                        ☰
+                    </button>
+
+                    <div>
+                        <h1>Admin Dashboard</h1>
+                        <p>School Management System</p>
+                    </div>
+
+                </div>
+
+                <div class="topbar-right">
+
+                    <div class="admin-info">
+                        <div class="admin-avatar">A</div>
+
+                        <div>
+                            <strong>Administrator</strong>
+                            <small>UI Preview</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- PAGE CONTENT -->
+            <div class="content">
+
+                <!-- OVERVIEW -->
+                <section id="overview" class="page-section">
+
+                    <div class="welcome-section">
+                        <div>
+                            <h2>Welcome to KAAVAL</h2>
+                            <p>
+                                Manage your school's attendance
+                                and administration.
+                            </p>
+                        </div>
+
+                        <div class="date-box">
+                            <span>INDIA TIME</span>
+                            <strong id="clock">Loading...</strong>
+                        </div>
+                    </div>
+
+
+                    <!-- CONNECTION NOTICE -->
+                    <div class="notice">
+                        <strong>Development Preview:</strong>
+
+                        This dashboard is not connected to the
+                        PostgreSQL database or ESP32 device yet.
+                        Live information will be added in later steps.
+                    </div>
+
+
+                    <!-- SUMMARY CARDS -->
+                    <div class="section-heading">
+                        <h2>School Overview</h2>
+                        <p>Live data will appear after backend integration.</p>
+                    </div>
+
+
+                    <div class="stats-grid">
+
+                        <div class="stat-card">
+                            <div class="stat-icon blue">ST</div>
+                            <p>Total Students</p>
+                            <h3>—</h3>
+                            <small>Database connection pending</small>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon green">TC</div>
+                            <p>Total Teachers</p>
+                            <h3>—</h3>
+                            <small>Database connection pending</small>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon orange">CL</div>
+                            <p>Total Sections</p>
+                            <h3>—</h3>
+                            <small>Database connection pending</small>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon purple">AT</div>
+                            <p>Today's Attendance</p>
+                            <h3>—</h3>
+                            <small>Attendance connection pending</small>
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUICK ACCESS -->
+                    <div class="section-heading">
+                        <h2>Quick Navigation</h2>
+                        <p>Open a dashboard section.</p>
+                    </div>
+
+                    <div class="quick-grid">
+
+                        <a href="#students" class="quick-card">
+                            <span>♙</span>
+                            <strong>Manage Students</strong>
+                            <small>Student management section</small>
+                        </a>
+
+                        <a href="#teachers" class="quick-card">
+                            <span>♟</span>
+                            <strong>Manage Teachers</strong>
+                            <small>Teacher management section</small>
+                        </a>
+
+                        <a href="#attendance" class="quick-card">
+                            <span>✓</span>
+                            <strong>Attendance</strong>
+                            <small>Attendance management section</small>
+                        </a>
+
+                        <a href="#reports" class="quick-card">
+                            <span>▤</span>
+                            <strong>View Reports</strong>
+                            <small>Attendance reports section</small>
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+                <!-- PLACEHOLDER SECTIONS -->
+
+                <section id="students" class="page-section placeholder-section">
+                    <h2>Students</h2>
+                    <p>Student management will be developed in a later step.</p>
+                </section>
+
+                <section id="teachers" class="page-section placeholder-section">
+                    <h2>Teachers</h2>
+                    <p>Teacher management will be developed in a later step.</p>
+                </section>
+
+                <section id="classes" class="page-section placeholder-section">
+                    <h2>Classes & Sections</h2>
+                    <p>Class and section management will be developed later.</p>
+                </section>
+
+                <section id="attendance" class="page-section placeholder-section">
+                    <h2>Attendance</h2>
+                    <p>Live attendance will be connected to the backend later.</p>
+                </section>
+
+                <section id="reports" class="page-section placeholder-section">
+                    <h2>Reports</h2>
+                    <p>Attendance reports will be developed later.</p>
+                </section>
+
+                <section id="devices" class="page-section placeholder-section">
+                    <h2>Devices</h2>
+                    <p>ESP32 device management will be developed later.</p>
+                </section>
+
+                <section id="settings" class="page-section placeholder-section">
+                    <h2>Settings</h2>
+                    <p>School settings will be developed later.</p>
+                </section>
+
+
+                <!-- FOOTER -->
+                <footer class="footer">
+                    <p>
+                        KAAVAL School Attendance System
+                        © <span id="year"></span>
+                    </p>
+                    <small>Development Version</small>
+                </footer>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="../js/admin.js"></script>
+
+</body>
+</html>
