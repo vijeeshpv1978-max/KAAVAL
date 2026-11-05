@@ -1,0 +1,128 @@
+# KAAVAL – Database Architecture
+
+## 1. Database Information
+
+Project: KAAVAL  
+Database Engine: PostgreSQL  
+Architecture: Relational Database  
+Timezone: Asia/Kolkata
+
+## 2. Main Database Tables
+
+1. students
+2. teachers
+3. parents
+4. classes
+5. sections
+6. student_parents
+7. users
+8. attendance
+9. devices
+10. holidays
+11. school_settings
+12. sms_notifications
+13. sync_records
+14. teacher_classes
+
+## 3. Table Relationships
+
+### Students
+- Each student belongs to a class/section.
+- Each student has a unique student ID.
+- Each student has a fingerprint reference.
+
+### Attendance
+- Each attendance record belongs to one student.
+- Each attendance record references the device that recorded it.
+- A student can have multiple attendance records.
+
+### Teachers
+- A teacher account can be assigned to permitted classes.
+
+### Parents
+- A parent can be linked to one or more students.
+- Parent access is restricted to linked students.
+
+### Users
+- Users have roles: ADMIN, TEACHER, PARENT.
+- Passwords are stored as secure hashes.
+
+### Devices
+- Each registered ESP32 device has a unique device ID.
+- Device authentication is required.
+
+### Holidays
+- Stores school holidays and their dates.
+
+### School Settings
+- Stores school timing and attendance rules.
+
+### SMS Notifications
+- Stores notification delivery status.
+- Does not store unnecessary message content or secrets.
+
+### Sync Records
+- Tracks offline attendance synchronization.
+- Prevents duplicate event processing.
+
+## 4. Database Rules
+
+1. Use primary keys for every main table.
+2. Use foreign keys for relationships.
+3. Use unique constraints where required.
+4. Use indexes for frequently searched fields.
+5. Store timestamps consistently.
+6. Use transactions for attendance synchronization.
+7. Restrict access according to user roles.
+8. Keep regular database backups.
+
+## 5. Attendance Data Flow
+
+ESP32 Fingerprint Sensor
+        ↓
+ESP32 Attendance Event
+        ↓
+Backend API
+        ↓
+PostgreSQL Database
+        ↓
+Admin / Teacher / Parent Dashboard
+
+## 6. Security
+
+- Never store plain-text passwords.
+- Never expose database credentials in frontend files.
+- Use HTTPS for remote connections.
+- Authenticate ESP32 devices.
+- Restrict access to personal information.
+- Use fictional data during development.
+
+CLASSES
+   |
+   └── STUDENTS
+          |
+          ├── ATTENDANCE
+          |
+          └── STUDENT_PARENTS
+                    |
+                    └── PARENTS
+
+TEACHERS
+   |
+   └── Assigned Classes
+
+USERS
+   |
+   ├── ADMIN
+   ├── TEACHER
+   └── PARENT
+
+DEVICES
+   |
+   ├── ATTENDANCE
+   └── SYNC_RECORDS
+
+HOLIDAYS
+SCHOOL_SETTINGS
+SMS_NOTIFICATIONS
+
